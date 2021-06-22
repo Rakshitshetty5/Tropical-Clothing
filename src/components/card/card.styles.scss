@@ -1,0 +1,144 @@
+.card{
+    position: relative;
+    height: 26rem;
+    width: 17rem;
+    box-shadow: 0px 8px 10px rgba(0,0,0,0.5);
+    margin: 2rem;
+    
+    
+
+    &-image{
+        height: 80%;
+        width: 100%;
+        background-position: top;
+        background-size: cover;
+        
+    }
+
+
+    &-content{
+        position: absolute;
+        bottom: 0px;
+        width: 80%;
+        height: 5rem;
+        background-color: white;
+        left: 9%;
+        text-align: center;
+        transition: 0.5s;
+        overflow: hidden;
+        padding: 1%;
+        border-top: 1px solid lightgrey;
+
+        &__title{
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #333;
+            margin-top: 0.3rem;
+            text-transform: capitalize;
+
+        }
+
+        &__price{
+            font-weight: 800;
+            margin-top: 0.6rem;
+           
+
+        }
+
+        &__description{
+            opacity: 0;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            text-align: left;
+        }
+
+        &__sizes{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+
+            .size{
+                height: fit-content;
+                width: fit-content;
+                padding: 0.4rem 0.6rem;
+                border-radius: 50%;
+                border: 2px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                
+                &:not(:last-child){
+                    margin-right: 1rem;
+                }
+
+                &:focus-within, &:hover{
+                    border: 2px solid red;
+                    color: red;
+                }
+
+                
+            }
+
+            .selected-size{
+                border: 2px solid red;
+                color: red;
+            }
+
+        }
+
+       
+
+        h1{
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-top: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .fav__icon{
+            height: 2rem;
+            width: 2rem;
+            fill: grey;
+            display: none;
+        }
+        .selected{
+            fill: red;
+        }
+    }
+
+    &:hover{
+        .card-content{
+            height: 100%;
+            width: 100%;
+            left: 0%; 
+
+            &__description{
+                opacity: 1;
+                transition-delay: 0.1s;
+            }
+
+            &__head{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .fav__icon{
+                    display: block;
+                }
+
+            }
+
+            &__price{
+                text-align: start;
+                margin-left: 2px;
+            }
+        }
+
+    }
+}
+
+
+

@@ -1,0 +1,14 @@
+.custom-input{
+    height: 2rem;
+    width: 20rem;
+    padding: .5rem;
+    border-radius: 16px;
+    outline: none;
+    font-size: 1.2rem;  
+    margin-top: 1rem; 
+
+    &:focus{
+        border:  solid green;
+    }
+  
+}

@@ -1,0 +1,42 @@
+.cart-dropdown{
+    position: absolute;
+    bottom: -270px;
+    right: 5px;
+    height: 18rem;
+    width: 15rem;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+    z-index: 2;
+
+    @media only screen and (max-width: 688px){
+        bottom: -200px;
+    }
+
+    &__items{
+        height: 15rem;
+        width: 100%;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+
+      
+    }
+
+    &__button{
+        height: 3rem;
+        width: 100%;
+    }
+
+    &__message{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 1.2rem;
+    }
+
+   
+
+    
+}

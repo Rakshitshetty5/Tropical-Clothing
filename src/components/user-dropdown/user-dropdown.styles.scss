@@ -1,0 +1,53 @@
+.user-dropdown{
+    position: absolute;
+    bottom: -110px;
+    right: 95px;
+    height: 8rem;
+    border: 1px solid darkgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    background-color: white;
+    z-index: 2;
+
+    @media only screen and (max-width: 688px){
+        bottom: -40px;
+    }
+   
+    &__logout, &__settings, &__login, &__wishlist{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0 2rem;
+        text-decoration: none;
+
+        &:hover{
+            background-color: lightgrey;
+        }
+
+        span{
+            margin-left: 1rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: black;
+            
+        }
+
+        .logout-icon, .cog-icon, .heart-icon{
+            height: 1.8rem;
+            width: 1.8rem;
+        }
+    
+        .logout-icon, .heart-icon{
+            fill: red;
+        }
+    
+        .cog-icon{
+            fill: grey;
+        }
+    }
+
+   
+}

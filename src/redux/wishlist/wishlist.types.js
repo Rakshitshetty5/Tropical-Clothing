@@ -1,0 +1,4 @@
+export const WishlistActionTypes = {
+    MANIPULATE_WISHLIST:'MANIPULATE_WISHLIST',
+    WISHLIST_ERROR:'WISHLIST_ERROR'
+}

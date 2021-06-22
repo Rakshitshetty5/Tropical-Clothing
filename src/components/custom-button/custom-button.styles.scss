@@ -1,0 +1,45 @@
+.custom-button{
+    background-color: #ff3e6c;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+        background-color: white;
+        color: #ff3e6c;
+    }
+}
+
+.card-button{
+    height: 2rem;
+    width: 90%;
+    margin-left: 4%;
+    margin-top: 2rem;
+    background-color: #ff3e6c;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.banner-button{
+    height: 4rem;
+    width: 10rem;
+    font-size: 1.1rem;
+    background-color: green;
+
+    &:hover{
+        background-color: white;
+        color: green;
+    }
+   
+
+}
+
+.google-button{
+    background-color: #4285F4;
+}
+

@@ -1,0 +1,39 @@
+.banner{
+    width: 95%;
+    height: 38rem;
+    margin-top: 1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    @media only screen and (max-width: 688px){
+        background-position: left 60% bottom;
+    }
+
+    &-box{
+        height: 45%;
+        width: 20%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+
+        @media only screen and (max-width: 688px){
+            width: 60%;
+        }
+       
+
+        &__message{
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: black;
+            font-weight: 500;
+        }
+    }
+}

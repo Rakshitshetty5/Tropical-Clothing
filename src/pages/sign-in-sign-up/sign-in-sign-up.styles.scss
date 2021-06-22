@@ -1,0 +1,24 @@
+.sign-in-sign-up{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    .in, .up{
+        h1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+            button{
+                margin-left: .6rem;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                font-size: 1.2rem;
+                font-weight: 900;
+                color: darkcyan;
+
+            }
+        }
+    }
+}

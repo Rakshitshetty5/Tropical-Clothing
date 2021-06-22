@@ -1,0 +1,5 @@
+export const UserActionTypes = {
+    SIGN_IN_SUCCESS : 'SIGN_IN_SUCCESS',
+    SIGN_OUT_SUCCESS: 'SIGN_OUT_SUCCESS',
+    USER_FAILURE : 'USER_FAILURE',
+}

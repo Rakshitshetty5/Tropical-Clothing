@@ -1,0 +1,15 @@
+.filter-icon{
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    background-color: grey;
+    padding: 1rem;
+    border-radius: 50%;
+
+    &__svg{
+        height: 2rem;
+        width: 2rem;
+        fill: lightgreen;
+    }
+
+}

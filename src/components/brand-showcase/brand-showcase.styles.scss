@@ -1,0 +1,26 @@
+.brand-showcase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+
+    &__title{
+        width: 100%;      
+    }
+    
+    &__images{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+       
+        img{
+            cursor: pointer;
+            margin-top: 1rem;
+            @media (max-width: 908px) {
+                height: 50%;
+                width: 50%;
+            }
+        }
+    }
+}
