@@ -1,4 +1,5 @@
 import { WishlistActionTypes } from "./wishlist.types"
+import { UserActionTypes } from "../user/user.types"
 
 const INITIAL_STATE = {
     wishlistItems : [],
@@ -19,6 +20,13 @@ const wishlistReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 wishlistItems: [],
                 error: action.payload
+            }
+        }
+
+        case UserActionTypes.SIGN_OUT_SUCCESS:{
+            return{
+                ...state,
+                wishlistItems: []
             }
         }
 

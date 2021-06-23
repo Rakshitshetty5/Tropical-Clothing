@@ -21,7 +21,7 @@ const CollectionPage = ({collection, getWishlistedIdsThunk, user_id}) => {
     
     useEffect(() => {
         getWishlistedIdsThunk(user_id)
-    },[user_id])
+    },[getWishlistedIdsThunk,user_id])
 
     const handleChange = (e) => {
         const val = e.target.name.toLowerCase()

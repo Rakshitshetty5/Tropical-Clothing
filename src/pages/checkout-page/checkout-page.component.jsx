@@ -1,3 +1,4 @@
+import React from 'react'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 
@@ -12,35 +13,42 @@ const CheckoutPage = ({cartItems, cartTotal}) => {
     return(
         <div className="checkout">
             <h1>Shopping Cart</h1>
-            <div className="checkout-table">
-                <div className="checkout-headers">
-                    <div className="checkout-header">
-                        <span>Product</span>
+            {
+                cartItems.length > 0 ?
+                <React.Fragment>
+                    <div className="checkout-table">
+                        <div className="checkout-headers">
+                            <div className="checkout-header">
+                                <span>Product</span>
+                            </div>
+                            <div className="checkout-header">
+                                <span>Size</span>
+                            </div>
+                            <div className="checkout-header">
+                                <span>Quantity</span>
+                            </div>
+                            <div className="checkout-header">
+                                <span>Total Price</span>
+                            </div>
+                        </div>
+                        <div className="checkout-items">
+                            {
+                                cartItems.map(item => <CheckoutItem item={item} key={item.id + item.prodSize}/>)
+                            }
+                        </div>
                     </div>
-                    <div className="checkout-header">
-                        <span>Size</span>
+                    <div className="cart-total">
+                            <h4>Total:</h4>
+                            <div>₹{cartTotal}</div>
                     </div>
-                    <div className="checkout-header">
-                        <span>Quantity</span>
-                    </div>
-                    <div className="checkout-header">
-                        <span>Total Price</span>
-                    </div>
-                </div>
-                <div className="checkout-items">
-                    {
-                        cartItems.map(item => <CheckoutItem item={item} key={item.id + item.prodSize}/>)
-                    }
-                </div>
-            </div>
-            <div className="cart-total">
-                    <h4>Total:</h4>
-                    <div>₹{cartTotal}</div>
-            </div>
-            
-            <StripeButton price={cartTotal}/>
-            <h3>Test Mode Credit Card Details</h3>
-            <h4>4242 4242 4242 4242 - Exp : 06/2020 - CVV:123 </h4>
+                    
+                    <StripeButton price={cartTotal}/>
+                    <h3>Test Mode Credit Card Details</h3>
+                    <h4>4242 4242 4242 4242 - Exp : 06/2020 - CVV:123 </h4>
+                </React.Fragment>
+                :
+                <h1>Your cart is empty</h1>
+            }
                 
         </div>
     )

@@ -45,8 +45,13 @@ const Card = ({ item, addItemToCart, user_id, manipulateWishlist, wishlist }) =>
                         </div>
                     </div>
                     <div className="card-content__fav" onClick={() => { 
-                        setSelected(!isWishlisted)
-                        manipulateWishlist({user_id,prod_id : item.id, isWishlisted})}}>
+                        if(user_id){
+                            setSelected(!isWishlisted)
+                            manipulateWishlist({user_id,prod_id : item.id, isWishlisted})
+                        }else{
+                            alert('You need to login')
+                        }
+                        }}>
                         <svg className={`${selected ? "selected" : ''}  fav__icon`}>
                             <use href={sprite + "#icon-heart"} />
                         </svg>
@@ -61,7 +66,16 @@ const Card = ({ item, addItemToCart, user_id, manipulateWishlist, wishlist }) =>
                             )
                        }
                 </div>
-                <CustomButton cardbutton onClick={() => modifySelectedItem()}>Add to Cart</CustomButton>
+                <CustomButton cardbutton onClick={() => {
+                    if(user_id){
+                        modifySelectedItem()
+                    }else{
+                        alert('You need to login')
+                    }
+                
+                }
+            
+                }>Add to Cart</CustomButton>
             </div>
         </div>
     )
