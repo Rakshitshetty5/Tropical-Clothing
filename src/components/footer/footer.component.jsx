@@ -9,10 +9,10 @@ const Footer = () => (
             <div className="footer-nav">
                 <h1>Products</h1>
                 <ul className="footer-nav__items">
-                    <Link to='/shop/shirts' className="item">Shirts</Link>    
-                    <Link to='/shop/jackets' className="item">Jackets</Link>    
-                    <Link to='/shop/hats' className="item">Hats</Link>    
-                    <Link to='/shop/shoes' className="item">Shoes</Link>    
+                    <Link to='/shop/products/shirts' className="item">Shirts</Link>    
+                    <Link to='/shop/products/jackets' className="item">Jackets</Link>    
+                    <Link to='/shop/products/hats' className="item">Hats</Link>    
+                    <Link to='/shop/products/shoes' className="item">Shoes</Link>    
                 </ul>
             </div>
             <div className="footer-info">

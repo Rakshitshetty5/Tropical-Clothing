@@ -11,10 +11,12 @@
 
     font-size: 1.4rem;
 
+    
+
     @media only screen and (max-width: 688px){
         flex-wrap: wrap;
         align-content: space-around;
-        height: 11rem;
+        height: 10rem;
      }
 
 
@@ -26,7 +28,6 @@
 
     .search-bar{
         flex-basis: 40%;
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -35,6 +36,7 @@
             order: 1;
             flex: 0 0 90%;
             margin-left: 3%;
+            margin-top: -30px;
          }
 
         &__input{

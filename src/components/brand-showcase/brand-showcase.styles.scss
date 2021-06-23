@@ -4,6 +4,22 @@
     align-items: center;
     margin-top: 1rem;
 
+    h1{
+        display: none;
+    }
+    
+    @media only screen and (max-width: 688px){
+        &>img{
+            display: none;
+        }
+        h1{
+            display: flex;
+            font-size: 1.5rem;
+            color: rgb(177, 155, 34);
+        }
+    }
+    
+
     &__title{
         width: 100%;      
     }
@@ -18,8 +34,8 @@
             cursor: pointer;
             margin-top: 1rem;
             @media (max-width: 908px) {
-                height: 50%;
-                width: 50%;
+                height: 45%;
+                width: 45%;
             }
         }
     }
