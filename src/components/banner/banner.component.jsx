@@ -2,7 +2,6 @@ import { withRouter } from 'react-router-dom'
 
 import CustomButton from '../custom-button/custom-button.component'
 
-
 import './banner.styles.scss'
 
 const Banner = ({ imgUrl, history }) => (

@@ -1,12 +1,8 @@
-import './with-loader.styles.scss'
+import Loader from '../loader/loader.component'
 
 const WithLoader = WrappedComponent => ({ isLoading, ...otherProps }) => {
     return isLoading === true ? (
-        <div className="loader-container">
-            <div className="loader-icon">
-                <h1>TC</h1>
-            </div>
-        </div>
+        <Loader/>
         ) : 
         <WrappedComponent {...otherProps} />
 
